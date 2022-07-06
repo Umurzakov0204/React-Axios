@@ -2,9 +2,9 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import axios from 'axios'
+import TodosList from "./TodosList";
 
 const Country = () => {
-
     const [countries, setCountries] = useState([])
 
     useEffect(() => {
@@ -17,6 +17,10 @@ const Country = () => {
     return(
         <>
         <div>{countries.title}</div>
+        <div>{countries.id}</div>
+        <TodosList 
+        data={countries}
+        />
         </>
     )
 }
